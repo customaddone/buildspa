@@ -19,4 +19,5 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/todo',"TodoController@index");
+Route::get('/todo',"TodoController@index")->
+    middleware('auth');
